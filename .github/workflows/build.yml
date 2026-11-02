@@ -2,7 +2,8 @@ name: Build FreeTemplates
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -14,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-            - name: Build Android32
+      - name: Build Android32
         id: build
         uses: geode-sdk/build-geode-mod@main
         with:
